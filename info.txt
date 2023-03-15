@@ -1,0 +1,28 @@
+2 Roles -> 1) Admin 2) User Both should be logged in at the same time in different tabs on the same browser. Use a proper theme for a panel. Admin will add Quiz questions and answers. Admin will add time for a question. (ex. 60 seconds) Users can register by email and password. Users can log in with their email and password. After login user can give a test with questions that the admin created. Each question has a time limit that the admin created. (ex. if the admin added 60 seconds, then each question has only 60 seconds to answer) If a user doesn't give an answer at a particular time, then that question will be passed on and the next question will appear. The user can not go back to the previous question. This same loop continues until the test is over. After the test user can see the result. On the admin side, the admin can also see the users list with the test result.
+
+
+
+composer create-project laravel/laravel quiz_app
+
+
+php artisan make:controller AdminController
+
+
+auth.logout
+admin.logout
+
+
+questions
+answers
+
+
+php artisan make:model Question -m
+
+php artisan make:model QuestionCorrectAnswer
+
+php artisan make:model Answer -m
+
+
+php artisan make:controller TestController -r
+
+php artisan make:controller UserController
